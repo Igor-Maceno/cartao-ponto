@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Ponto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cartão de Ponto - Controle de Horas</h1>
+        
+        <!-- Formulário para entrada e saída de horas -->
+        <form id="form">
+            <h2>Horas trabalhadas (Dia 1 ao Dia 31)</h2>
+            <div class="day-inputs">
+                <!-- Tabela de entrada e saída para todos os dias -->
+                <table id="tabela-horas">
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Entrada Manhã</th>
+                            <th>Saída Manhã</th>
+                            <th>Entrada Tarde</th>
+                            <th>Saída Tarde</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Os campos serão gerados pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" id="calcularHorasBtn">Calcular Horas</button>
+        </form>
+
+        <hr>
+
+        <!-- Calculadora de salário -->
+        <h2>Calculadora de Salário</h2>
+        <div class="salary-calc">
+            <label for="valorHora">Valor da Hora</label>
+            <input type="number" id="valorHora" placeholder="Informe o valor da hora">
+            <button type="button" id="calcularSalarioBtn">Calcular Salário</button>
+        </div>
+
+        <hr>
+
+        <!-- Relatório de horas -->
+        <h2>Relatório de Horas</h2>
+        <table id="relatorio">
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horas Trabalhadas</th>
+                    <th>Salário do Dia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- O relatório será preenchido dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Exibição do salário total -->
+        <div id="salario-total">
+            <h3>Salário Total: R$ 0,00</h3>
+            <button id="downloadPDFBtn">Download do Relatório em PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
